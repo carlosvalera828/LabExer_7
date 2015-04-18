@@ -77,6 +77,26 @@ a {
 </div>
 <br>
 <div id=guitar>
+	<script language="JavaScript">
+	var i = 0;
+	var path = new Array();
+ 
+	// LIST OF IMAGES
+	path[0] = "images/guitar.jpg";
+	path[1] = "images/bassslide.jpg";
+	path[2] = "images/drumslide.png";
+	path[3] = "images/guitarslide.jpg";
+	path[4] = "images/micslide.jpg";
+
+	function swapImage()
+	{
+	 document.slide.src = path[i];
+	 if(i < path.length - 1) i++; else i = 0;
+	 setTimeout("swapImage()",3000);
+	}
+	window.onload=swapImage;
+	</script>
+	<img height="200" name="slide" src="images/guitar.jpg" width="400" />
 	<img class=roundrect src="images/guitar.jpg">
 </div><br>
 <div id=about>
